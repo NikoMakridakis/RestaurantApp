@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 function Counter(props) {
+
     const [count, setCount] = useState(props.count || 0);
 
     const onClickHandler = () => {
