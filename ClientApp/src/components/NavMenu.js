@@ -5,12 +5,10 @@ import './NavMenu.css';
 
 function NavMenu(props) {
 
-    const [collapsed, setCollapsed] = useState(true);
+    const [isCollapsed, setIsCollapsed] = useState(true);
 
     const toggleNavbar = () => {
-        setCollapsed({
-            collapsed: !collapsed
-        });
+        setIsCollapsed(!isCollapsed);
     }
 
     return (
@@ -19,7 +17,7 @@ function NavMenu(props) {
                 <Container>
                     <NavbarBrand tag={Link} to="/">Restaurant</NavbarBrand>
                     <NavbarToggler onClick={toggleNavbar} className="mr-2" />
-                    <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!props.collapsed} navbar>
+                    <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!isCollapsed} navbar>
                         <ul className="navbar-nav flex-grow">
                             <NavItem>
                                 <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
