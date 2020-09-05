@@ -4,7 +4,7 @@ function Counter(props) {
 
     const [count, setCount] = useState(props.count || 0);
 
-    const onClickHandler = () => {
+    function onClickHandler() {
         setCount(count + 1);
     }
 
