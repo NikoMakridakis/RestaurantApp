@@ -3,11 +3,11 @@ import { Collapse, Container, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLi
 import { Link } from 'react-router-dom';
 import './NavMenu.css';
 
-function NavMenu(props) {
+function NavMenu() {
 
     const [isCollapsed, setIsCollapsed] = useState(true);
 
-    const toggleNavbar = () => {
+    function toggleNavbar() {
         setIsCollapsed(!isCollapsed);
     }
 
